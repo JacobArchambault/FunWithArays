@@ -12,6 +12,7 @@ namespace FunWithArays
         {
             Console.WriteLine("***** Fun with Arrays *****");
             SimpleArrays();
+            RectMultidimensionalArray();
             Console.ReadLine();
         }
 
@@ -28,6 +29,28 @@ namespace FunWithArays
             foreach (int i in myInts)
                 Console.WriteLine(i);
 
+            Console.WriteLine();
+        }
+
+        static void RectMultidimensionalArray()
+        {
+            Console.WriteLine("=> Rectangular multidimensional array.");
+            // A rectangular MD array.
+            int[,] myMatrix = new int[51, 11];
+
+            for (int i = 0; i < 51; i++)
+                for (int j = 0; j < 11; j++)
+                    myMatrix[i, j] = i * j;
+
+            // Print (3*4) array.
+            for (int i = 0; i < 51; i++)
+            {
+                for (int j = 0; j < 11; j++)
+                {
+                    Console.Write(myMatrix[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
             Console.WriteLine();
         }
     }
